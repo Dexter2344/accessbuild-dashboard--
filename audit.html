@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Audit — AccessBuild</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="logo">◆</span>
+        <span class="brand-name">AccessBuild</span>
+      </a>
+      <a href="index.html" class="back-link">← Back</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Run Audit</h1>
+      <p class="subtitle">
+        Paste a UI tree XML from Android, or enter the app details manually.
+      </p>
+    </section>
+
+    <form id="audit-form" class="audit-form">
+      <div class="form-row">
+        <label for="app-name">App Name</label>
+        <input type="text" id="app-name" placeholder="e.g. Test Bank" required />
+      </div>
+
+      <div class="form-row">
+        <label for="package-name">Package Name</label>
+        <input type="text" id="package-name" placeholder="e.g. com.test.bank" />
+      </div>
+
+      <div class="form-row">
+        <label for="screen-name">Screen Name</label>
+        <input type="text" id="screen-name" placeholder="e.g. Login" value="Main Screen" />
+      </div>
+
+      <div class="form-row">
+        <label for="ui-tree">UI Tree XML (Android)</label>
+        <textarea id="ui-tree" rows="8" placeholder="<hierarchy>...paste UI Automator dump here...</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="submit-btn">
+        Run Audit →
+      </button>
+    </form>
+
+    <section id="result-section" class="result-section hidden">
+      <h2>Result</h2>
+      <div class="result-card">
+        <div class="grade-display">
+          <div class="grade-circle" id="result-grade">—</div>
+          <div class="grade-meta">
+            <div class="result-app" id="result-app">—</div>
+            <div class="result-screen" id="result-screen">—</div>
+          </div>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <span class="result-label">Score</span>
+            <span class="result-value" id="result-score">—</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Total Elements</span>
+            <span class="result-value" id="result-total">—</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Labeled</span>
+            <span class="result-value" id="result-labeled">—</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Unlabeled</span>
+            <span class="result-value" id="result-unlabeled">—</span>
+          </div>
+        </div>
+        <div class="recommendation" id="result-recommendation">—</div>
+      </div>
+    </section>
+
+    <div id="error-box" class="error-box hidden"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

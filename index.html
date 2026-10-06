@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AccessBuild — Every App. Scored.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo">◆</span>
+        <span class="brand-name">AccessBuild</span>
+      </div>
+      <div class="status-badge" id="api-status">
+        <span class="dot"></span> Checking API...
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Every App. Scored.</h1>
+      <p class="subtitle">
+        Real accessibility audit results from mobile apps. Powered by AccessBuild API.
+      </p>
+      <a href="audit.html" class="btn btn-primary">Run New Audit →</a>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Total Audits</div>
+        <div class="stat-value" id="total-audits">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Average Accessibility</div>
+        <div class="stat-value" id="avg-accessibility">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Grade Distribution</div>
+        <div class="stat-value grade-dist" id="grade-distribution">—</div>
+      </div>
+    </section>
+
+    <section class="recent-section">
+      <h2>Recent Audits</h2>
+      <div id="recent-audits" class="recent-list">
+        <p class="loading">Loading audits...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>AccessBuild — Built by <strong>Dexter Digital</strong></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
